@@ -1,16 +1,5 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { AngularFirestoreCollection } from "@angular/fire/firestore";
-import { AngularFirestoreDocument } from "@angular/fire/firestore";
-import { Observable } from "rxjs";
-
-//interfaz de un string (sustituye clase.ts)
-export interface Item {
-  name: string;
-}
-//importar .map
-import { map } from "rxjs/operators";
-//para eliminar
 
 @Injectable({
   providedIn: "root"
@@ -18,13 +7,6 @@ import { map } from "rxjs/operators";
 
 //CONEXION BDD Y CRUD
 export class ProductoService {
-  //variables
-  private itemsCollection: AngularFirestoreCollection<Item>;
-  items: Observable<Item[]>;
-
-  //para eliminar
-  private itemDoc: AngularFirestoreDocument<Item>;
-
   //constructor
   constructor(private afs: AngularFirestore) {
     //vacio

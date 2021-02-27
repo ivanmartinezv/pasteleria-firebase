@@ -39,7 +39,7 @@ export class ProductoComponent implements OnInit {
   //ngOnInit(): void {}
 
   ngOnInit() {
-    //ANALIZAR ESTA WEA
+    //carga los datos de firebase
     this._productoService.getProductos().subscribe(productosSnapshot => {
       this.productos = [];
       productosSnapshot.forEach((productoData: any) => {
@@ -111,12 +111,15 @@ export class ProductoComponent implements OnInit {
   }
 
   public deleteProducto(documentId) {
-  this._productoService.deleteProducto(documentId).then(() => {
-    console.log('Documento eliminado!');
-  }, (error) => {
-    console.error(error);
-  });
-}
+    this._productoService.deleteProducto(documentId).then(
+      () => {
+        console.log("Documento eliminado!");
+      },
+      error => {
+        console.error(error);
+      }
+    );
+  }
 
   /*eliminar(item: Item) {
     this._productoService.eliminarItem(item);
