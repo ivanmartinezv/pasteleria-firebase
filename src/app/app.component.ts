@@ -15,8 +15,7 @@ export interface Item {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  version = "Angular " + VERSION.major;
-  titulo = "Pasteleria usando Firebase";
+  titulo = "Pasteleria usando Firebase y Angular " + VERSION.major;
   //un item
   //item: Observable<Item>; //no se usa
   //coleccion de items (asi se llama en firebase)
