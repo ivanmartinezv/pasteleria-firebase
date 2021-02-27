@@ -11,18 +11,17 @@ import { AngularFireModule } from "@angular/fire";
 import { environment } from "../environments/environment";
 
 @NgModule({
-  declarations: [AppComponent, ProductoComponent],
+  declarations: [
+    AppComponent,
+    //componentes
+    ProductoComponent
+  ],
   imports: [
     BrowserModule,
     //AppRoutingModule, //rutas
     AngularFireModule.initializeApp(environment.firebase), //configuracion de firebase
     FormsModule, //formularios
     ReactiveFormsModule //formularios
-    /*
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule
-    */
   ],
   providers: [],
   bootstrap: [AppComponent]
